@@ -1,10 +1,10 @@
 # VMWareWorkstationAPI
 VMWare Workstation RestAPI
 
-This Powershel module lets allows you to interact programmatically with the core VMware hypervisor and virtual machines of the VMware Workstation Pro REST API
+This Powershel module allows you to interact programmatically with the core VMware hypervisor and virtual machines of the VMware Workstation Pro REST API
 
-The API Modules is currently stil under development.
+The API Modules is currently still under development.
 
-You can use all code provided in the module freely!
+You can use the code provided in the module freely!
 
 ![This is an image](https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/VMWareWorkstationAPI.png)
