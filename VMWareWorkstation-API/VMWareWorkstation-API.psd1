@@ -1,4 +1,4 @@
-﻿#Requires -RunAsAdministrator
+﻿##Requires -RunAsAdministrator
 #
 # Module manifest for module 'VMWareWorkstation-API'
 #
