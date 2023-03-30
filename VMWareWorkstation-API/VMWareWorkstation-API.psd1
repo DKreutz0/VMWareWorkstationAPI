@@ -36,10 +36,10 @@ PowerShellVersion = '7.3.3'
 #PowerShellHostName = 'VMWareWorkstation-API'
 
 # Minimum version of the Windows PowerShell host required by this module
-#PowerShellHostVersion = '5.1.22621.963'
+PowerShellHostVersion = '7.0.0'
 
 # Minimum version of Microsoft .NET Framework required by this module. This prerequisite is valid for the PowerShell Desktop edition only.
-# DotNetFrameworkVersion = ''
+ DotNetFrameworkVersion = '4.0.0.0'
 
 # Minimum version of the common language runtime (CLR) required by this module. This prerequisite is valid for the PowerShell Desktop edition only.
 # CLRVersion = ''
