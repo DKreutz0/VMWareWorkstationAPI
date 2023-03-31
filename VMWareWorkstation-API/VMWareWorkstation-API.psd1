@@ -1,4 +1,4 @@
-﻿##Requires -RunAsAdministrator
+﻿#requires -RunAsAdministrator
 #
 # Module manifest for module 'VMWareWorkstation-API'
 #
@@ -66,7 +66,34 @@ DotNetFrameworkVersion = '4.0.0.0'
 #NestedModules = @('')
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport =  @('Get-VMWareWorkstationConfiguration','Get-VMWareWorkstationDocumentation','Get-VMVirtualNetworks','Get-VMNetMacToip','Get-VMTemplate','Get-VM','Get-VMConfigParam','Get-VMRestrictions','Set-VMConfig','Set-VMConfigParam','New-VMClonedMachine','Register-VMClonedMachine','Remove-VMClonedMachine','Get-VMIpAddress','Get-VMNic','Get-VMnicIps','Update-VMNetAdapter','Add-VMNetAdapter','Remove-VMNetAdapter','Get-VMPowerSettings','Set-VMPowerSettings','Get-VMSSharedFolders','Set-VMSSharedFolders','Update-VMSSharedFolders','Add-VMSSharedFolders','Remove-VMSSharedFolders')
+FunctionsToExport = @(
+    'Get-VMWareWorkstationConfiguration',
+    'Get-VMWareWorkstationDocumentation',
+    'Get-VMVirtualNetworks',
+    'Get-VMNetMacToip',
+    'Get-VMTemplate',
+    'Get-VM',
+    'Get-VMConfigParam',
+    'Get-VMRestrictions',
+    'Set-VMConfig',
+    'Set-VMConfigParam',
+    'New-VMClonedMachine',
+    'Register-VMClonedMachine',
+    'Remove-VMClonedMachine',
+    'Get-VMIpAddress',
+    'Get-VMNic',
+    'Get-VMnicIps',
+    'Update-VMNetAdapter',
+    'Add-VMNetAdapter',
+    'Remove-VMNetAdapter',
+    'Get-VMPowerSettings',
+    'Set-VMPowerSettings',
+    'Get-VMSSharedFolders',
+    'Set-VMSSharedFolders',
+    'Update-VMSSharedFolders',
+    'Add-VMSSharedFolders',
+    'Remove-VMSSharedFolders'
+)
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = '*'
