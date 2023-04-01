@@ -18,8 +18,8 @@ Powershell Module Documentation & Template documentation
 All Functions have a SYNOPSIS with detailed  informatioon and examples
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-How to create a Virtual Machine https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/VMWareWorkstation-API/Documentation/Create%20a%20VM%20template%20on%20VMware%20Workstation.docx
-How to create a Virtual Machine Template https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/VMWareWorkstation-API/Documentation/Create%20a%20VM%20template%20on%20VMware%20Workstation.docx
+- How to create a Virtual Machine https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/VMWareWorkstation-API/Documentation/Create%20a%20VM%20template%20on%20VMware%20Workstation.docx
+- How to create a Virtual Machine Template https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/VMWareWorkstation-API/Documentation/Create%20a%20VM%20template%20on%20VMware%20Workstation.docx
 
 
 Examples
