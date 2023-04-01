@@ -15,12 +15,19 @@ Build, test and demo software across an array of different devices, platforms an
 
 Powershell Module Documentation & Template documentation
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-All Functions have a synopsis with detailed examples
-How to crate a Virtual Machine https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/VMWareWorkstation-API/Documentation/Create%20a%20VM%20template%20on%20VMware%20Workstation.docx
-How to create a Virtual Machine Template https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/VMWareWorkstation-API/Documentation/Create%20a%20VM%20template%20on%20VMware%20Workstation.docx
+All Functions have a SYNOPSIS with detailed  informatioon and examples
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+How to crate a Virtual Machine https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/VMWareWorkstation-API/Documentation/Create%20a%20VM%20template%20on%20VMware%20Workstation.docx
+How to create a Virtual Machine Template https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/VMWareWorkstation-API/Documentation/Create%20a%20VM%20template%20on%20VMware%20Workstation.docx
+
+
 Examples
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/VMWareWorkstation-API/Examples/README.md
+https://github.com/DKreutz0/VMWareWorkstationAPI/tree/main/VMWareWorkstation-API/Examples
 
 
 ![This is an image](https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/VMWareWorkstationAPI.png)
