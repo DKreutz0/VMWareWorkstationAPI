@@ -1,5 +1,5 @@
 # VMWareWorkstationAPI
-Powersshell VMWare Workstation Rest API Module.
+Powershell VMWare Workstation Rest API Module.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This Powershell module allows you to interact programmatically with the VMware Workstation hypervisor cpore and virtual machines via the VMware Workstation Pro REST API
