@@ -15,7 +15,7 @@ Build, test and demo software across an array of different devices, platforms an
 
 Powershell Module Documentation & Template documentation
 
-All Functions have a synopsis with detailed  informatioon and examples
+All Functions have a synopsis with detailed information and off the shelf examples
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 - How to create a Virtual Machine https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/VMWareWorkstation-API/Documentation/Create%20a%20VM%20template%20on%20VMware%20Workstation.docx
