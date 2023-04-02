@@ -29,7 +29,7 @@ Copyright = '(c) 2023 Dennis Kreutz. All rights reserved.'
 Description = 'VMWare Workstation REST API'
 
 # Minimum version of the Windows PowerShell engine required by this module
-PowerShellVersion = '7.3.3'
+PowerShellVersion = '7.0.0'
 
 # Name of the Windows PowerShell host required by this module
 #PowerShellHostName = 'VMWareWorkstation-API'
@@ -47,7 +47,7 @@ DotNetFrameworkVersion = '4.0.0.0'
 # ProcessorArchitecture = ''
 
 # Modules that must be imported into the global environment prior to importing this module
-#RequiredModules = @()
+RequiredModules = @('CredentialManager')
 
 # Assemblies that must be loaded prior to importing this module
 # RequiredAssemblies = @()
@@ -110,7 +110,11 @@ AliasesToExport = '*'
 ModuleList = @()
 
 # List of all files packaged with this module
-FileList = @('VMWareWorkstation-API.psm1','VMWareWorkstation-API.psd1')
+FileList = @(
+    'VMWareWorkstation-API.psm1',
+    'VMWareWorkstation-API.psd1',
+    'README.md'
+    )
 
 # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
 PrivateData = @{
