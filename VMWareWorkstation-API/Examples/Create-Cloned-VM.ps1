@@ -6,26 +6,38 @@
 #>
 
 try {
-    import-Module -Name VMWareWorkstation-API 
+    Import-Module -Name VMWareWorkstation-API 
     #load settings
     [void]::(Get-VMWareWorkstationConfiguration)
     [string]$VMTemplate = "41OT7BN8UH80H4LV6RT2P306HGV638R6" # Get your VM Id with Get-VMTemplate -VirtualMachineName * -ResponseDetails
 
-    #Start creation of the Virtual Machine
-    $NewVMCloneName = $("CLONE-" + -join ((0x30..0x39) + ( 0x41..0x5A) + ( 0x61..0x7A) | Get-Random -Count 11 | % {[char]$_})).ToUpper()
-    $NewClonedVM = New-VMClonedMachine -NewVMCloneName $NewVMCloneName -NewVMCloneId $VMTemplate -ResponseDetails -ErrorAction Stop
-    $NewClonedVM
+    #Start creation of the Virtual Machine    
+
+    $NeWVM = Start-Job -Name "NeWVM" -ScriptBlock { 
+        $NewVMCloneName = $("CLONE-" + -join ((0x30..0x39) + ( 0x41..0x5A) + ( 0x61..0x7A) | Get-Random -Count 11 | % {[char]$_})).ToUpper()
+        $NewClonedVM = New-VMClonedMachine -NewVMCloneName $NewVMCloneName -NewVMCloneId $VMTemplate -ResponseDetails -ErrorAction Stop
+    }
+    
+   Wait-Job -job $NeWVM | Out-Null
+   
+   $NewClonedVM
 
     # Registering the Virtual Machine in the VMWare Workstation Gui
-    $ClonePath = (Get-VMTemplate -VirtualMachineName $NewVMCloneName).path
-    $RegisterVM = Register-VMClonedMachine -NewVMCloneName $NewVMCloneName -VMClonePath $ClonePath -ResponseDetails -ErrorAction Stop
+    $RegVM = Start-Job -Name "RegVM" -ScriptBlock { 
+
+        $ClonePath = Get-VMTemplate -VirtualMachineName $NewVMCloneName
+        $RegisterVM = Register-VMClonedMachine -NewVMCloneName $NewVMCloneName -VMClonePath $ClonePath.path -ResponseDetails -ErrorAction Stop
+    }
+
+    Wait-Job -job $RegVM | Out-Null
+
     $RegisterVM
+    
 }
 catch {
-
-    Write-host "Error occured $($error[0].exeption)"
+    Write-Host "Error occured $($error[0].exeption)"
     break
 }
 finally {
-    write-host "Virtual machine with name: $($NewVMCloneName) based on template: $($VMTemplate) was registered under name in the VMWare Gui"
+    Write-Host "`n Virtual machine with id $($ClonePath.id) and name: $($NewVMCloneName), based on template: $($VMTemplate) was registered in the VMWare Workstation GUI`n"
 }
