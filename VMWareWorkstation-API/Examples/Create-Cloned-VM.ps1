@@ -6,9 +6,7 @@
 #>
 
 try {
-    Import-Module -Name VMWareWorkstation-API 
-    #load settings
-    [void]::(Get-VMWareWorkstationConfiguration)
+    Import-Module -Name VMWareWorkstation-API -ErroAction Stop
     [string]$VMTemplate = "41OT7BN8UH80H4LV6RT2P306HGV638R6" # Get your VM Id with Get-VMTemplate -VirtualMachineName * -ResponseDetails
 
     #Start creation of the Virtual Machine    
