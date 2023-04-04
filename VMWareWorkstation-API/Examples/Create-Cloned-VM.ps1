@@ -7,7 +7,7 @@
 
 try {
     Import-Module -Name VMWareWorkstation-API -ErrorAction Stop
-    [string]$VMTemplate = "649TJ74BEAHCM93M56DM79CD21562M8D" # Get your VM Id with Get-VMTemplate -VirtualMachineName * -ResponseDetails
+    [string]$VMTemplate = "649TJ74BEAHCM93M56DM79CD21562M8D" # Get your VM Id with Get-VMTemplates option
     #Start creation of the Virtual Machine    
 
         $NewVMCloneName = $("CLONE-" + -join ((0x30..0x39) + ( 0x41..0x5A) + ( 0x61..0x7A) | Get-Random -Count 11 | % {[char]$_})).ToUpper()
