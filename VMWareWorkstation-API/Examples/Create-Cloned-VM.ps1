@@ -13,26 +13,18 @@ try {
 
     #Start creation of the Virtual Machine    
 
-    $NeWVM = Start-Job -Name "NeWVM" -ScriptBlock { 
         $NewVMCloneName = $("CLONE-" + -join ((0x30..0x39) + ( 0x41..0x5A) + ( 0x61..0x7A) | Get-Random -Count 11 | % {[char]$_})).ToUpper()
         $NewClonedVM = New-VMClonedMachine -NewVMCloneName $NewVMCloneName -NewVMCloneId $VMTemplate -ResponseDetails -ErrorAction Stop
-    }
-    
-   Wait-Job -job $NeWVM | Out-Null
-   
+
    $NewClonedVM
 
     # Registering the Virtual Machine in the VMWare Workstation Gui
-    $RegVM = Start-Job -Name "RegVM" -ScriptBlock { 
 
         $ClonePath = Get-VMTemplate -VirtualMachineName $NewVMCloneName
         $RegisterVM = Register-VMClonedMachine -NewVMCloneName $NewVMCloneName -VMClonePath $ClonePath.path -ResponseDetails -ErrorAction Stop
-    }
-
-    Wait-Job -job $RegVM | Out-Null
-
-    $RegisterVM
     
+    $RegisterVM
+
 }
 catch {
     Write-Host "Error occured $($error[0].exeption)"
