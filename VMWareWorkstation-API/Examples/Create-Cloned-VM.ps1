@@ -6,9 +6,8 @@
 #>
 
 try {
-    Import-Module -Name VMWareWorkstation-API -ErroAction Stop
-    [string]$VMTemplate = "41OT7BN8UH80H4LV6RT2P306HGV638R6" # Get your VM Id with Get-VMTemplate -VirtualMachineName * -ResponseDetails
-
+    Import-Module -Name VMWareWorkstation-API -ErrorAction Stop
+    [string]$VMTemplate = "649TJ74BEAHCM93M56DM79CD21562M8D" # Get your VM Id with Get-VMTemplate -VirtualMachineName * -ResponseDetails
     #Start creation of the Virtual Machine    
 
         $NewVMCloneName = $("CLONE-" + -join ((0x30..0x39) + ( 0x41..0x5A) + ( 0x61..0x7A) | Get-Random -Count 11 | % {[char]$_})).ToUpper()
@@ -16,9 +15,9 @@ try {
 
    $NewClonedVM
 
-    # Registering the Virtual Machine in the VMWare Workstation Gui
+    # Registering the Virtual Machine in the VMWare Workstation Gui ( if you delete a machine that is registered in the gui, de folder with a vmxf file will be left behind. )
 
-        $ClonePath = Get-VMTemplate -VirtualMachineName $NewVMCloneName
+        $ClonePath = Get-VirtualMachines -VirtualMachineName $NewVMCloneName
         $RegisterVM = Register-VMClonedMachine -NewVMCloneName $NewVMCloneName -VMClonePath $ClonePath.path -ResponseDetails -ErrorAction Stop
     
     $RegisterVM
