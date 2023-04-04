@@ -28,6 +28,3 @@ catch {
     Write-Host "Error occured $($error[0].exeption)"
     break
 }
-finally {
-    Write-Host "`n Virtual machine with id $($ClonePath.id) and name: $($NewVMCloneName), based on template: $($VMTemplate) was registered in the VMWare Workstation GUI`n"
-}
