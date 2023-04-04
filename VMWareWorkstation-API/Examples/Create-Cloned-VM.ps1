@@ -26,5 +26,4 @@ try {
 }
 catch {
     Write-Host "Error occured $($error[0].exeption)"
-    break
 }
