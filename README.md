@@ -2,7 +2,7 @@
 Powershell VMWare Workstation Rest API Module.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This Powershell module allows you to interact programmatically with the VMware Workstation hypervisor core and manage virtual machines via the VMware Workstation Pro REST API
+This Powershell module allows you to interact programmatically with the VMware Workstation hypervisor core to manage virtual machines via the VMware Workstation Pro REST API and with the VMRun commands.
 
 Build Virtual Machines on the Desktop via Powershell using the VMWare Workstation Rest Api. This way you can automate tasks such as sequencing software or doing automated roll-outs of test environments. or just cloning and/or editing Virtual Machines and manage there preferences.
 
