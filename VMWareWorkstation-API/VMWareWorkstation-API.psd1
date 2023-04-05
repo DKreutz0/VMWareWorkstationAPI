@@ -70,6 +70,7 @@ FunctionsToExport = @(
     'Get-VMWareWorkstationDocumentation',
     'Get-VMVirtualNetworks',
     'Get-VMPortForwardings',
+    'Get-VMMacToIpBinding',
     'Get-VMNetMacToip',
     'Get-VirtualMachines',
     'Get-VMTemplates',
