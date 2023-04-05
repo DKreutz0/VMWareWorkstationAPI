@@ -68,15 +68,15 @@ RequiredModules = @('CredentialManager')
 FunctionsToExport = @(
     'Get-VMWareWorkstationConfiguration',
     'Get-VMWareWorkstationDocumentation',
-    'Get-VMVirtualNetworks',
-    'Get-VMPortForwardings',
+    'Get-VMVirtualNetwork',
+    'Get-VMPortForwarding',
     'Get-VMMacToIpBinding',
     'Get-VMNetMacToip',
-    'Get-VirtualMachines',
-    'Get-VMTemplates',
+    'Get-VirtualMachineList',
+    'Get-VMTemplateList',
     'Get-VMConfig',
     'Get-VMConfigParam',
-    'Get-VMRestrictions',
+    'Get-VMRestriction',
     'Set-VMConfig',
     'Set-VMConfigParam',
     'New-VMClonedMachine',
@@ -90,11 +90,11 @@ FunctionsToExport = @(
     'Remove-VMNetAdapter',
     'Get-VMPowerStatus',
     'Set-VMPowerStatus',
-    'Get-VMSSharedFolders',
+    'Get-VMSharedFolder',
     'Set-VMSSharedFolders',
-    'Update-VMSSharedFolders',
-    'Add-VMSSharedFolders',
-    'Remove-VMSSharedFolders'
+    'Update-VMSharedFolder',
+    'Add-VMSharedFolder',
+    'Remove-VMSharedFolder'
 )
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
