@@ -15,7 +15,7 @@ try {
 
    $NewClonedVM
 
-    # Registering the Virtual Machine in the VMWare Workstation Gui ( if you delete a machine that is registered in the gui, de folder with a vmxf file will be left behind. )
+    # Registering the Virtual Machine in the VMWare Workstation console
 
         $ClonePath = Get-VirtualMachines -VirtualMachineName $NewVMCloneName
         $RegisterVM = Register-VMClonedMachine -NewVMCloneName $NewVMCloneName -VMClonePath $ClonePath.path -ResponseDetails -ErrorAction Stop
