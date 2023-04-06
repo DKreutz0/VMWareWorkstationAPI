@@ -68,10 +68,11 @@ RequiredModules = @('CredentialManager')
 FunctionsToExport = @(
     'Get-VMWareWorkstationConfiguration',
     'Get-VMWareWorkstationDocumentation',
-    'Get-VMVirtualNetwork',
-    'Get-VMPortForwarding',
-    'Get-VMMacToIpBinding',
-    'Get-VMNetMacToip',
+    'Get-VirtualNetworks',
+    'Get-VMReturnPortForwarding',
+    'Set-VMMacToIpBinding',
+    'Get-VMNetMacToIp',
+    'Set-PortForwarding',
     'Get-VirtualMachineList',
     'Get-VMTemplateList',
     'Get-VMConfig',
@@ -115,8 +116,7 @@ ModuleList = @()
 # List of all files packaged with this module
 FileList = @(
     'VMWareWorkstation-API.psm1',
-    'VMWareWorkstation-API.psd1',
-    'README.md'
+    'VMWareWorkstation-API.psd1'
     )
 
 # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
@@ -125,7 +125,7 @@ PrivateData = @{
     PSData = @{
 
         # Tags applied to this module. These help with module discovery in online galleries.
-        Tags = @('VMWare','Workstation','REST','API','RESTAPI','VM','Virtual Machine','Clone','Cloning','Automation','Golden image','Golden image')
+        Tags = @('VMWare','Workstation','REST','API','RESTAPI','VM','VirtualMachine','Clone','Cloning','Automation','template','automation')
 
         # A URL to the license for this module.
         LicenseUri = 'https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/LICENSE'
