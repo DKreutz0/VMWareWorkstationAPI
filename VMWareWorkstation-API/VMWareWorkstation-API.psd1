@@ -11,7 +11,7 @@
 RootModule = 'VMWareWorkstation-API.psm1'
 
 # Version number of this module.
-ModuleVersion = '1.0.1'
+ModuleVersion = '1.0.2'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -66,15 +66,18 @@ RequiredModules = @('CredentialManager')
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
 FunctionsToExport = @(
-    'Get-VMWareWorkstationConfiguration',
     'Get-VMWareWorkstationDocumentation',
-    'Get-VirtualNetworks',
-    'Get-VMReturnPortForwarding',
-    'Set-VMMacToIpBinding',
+    'Get-VMVirtualNetworkList',
+#Host Networks Management
     'Get-VMNetMacToIp',
-    'Set-PortForwarding',
-    'Get-VirtualMachineList',
-    'Get-VMTemplateList',
+    'Get-VMVirtualNetworkListPortForwarding',
+    'Set-VMMacToIpBinding',
+    'Set-VMPortForwarding',
+    'New-VMVirtualNetwork',
+    'Remove-VMPortForwarding',
+#VM Management
+    'Get-VMWareWorkstationConfiguration',
+    'Get-VMVirtualMachineList',
     'Get-VMConfig',
     'Get-VMConfigParam',
     'Get-VMRestriction',
@@ -83,19 +86,23 @@ FunctionsToExport = @(
     'New-VMClonedMachine',
     'Register-VMClonedMachine',
     'Remove-VMClonedMachine',
-    'Get-VMIpAddress',
+    'Get-VMTemplateList',
+#VM Network Adapters Management
+    'Get-VMIPAddress',
     'Get-VMNetworkAdapter',
     'Get-VMNetAdapterIPStack',
-    'Update-VMNetAdapter',
+    'Update-VMNetWorkAdapter',
     'Add-VMNetAdapter',
     'Remove-VMNetAdapter',
+#VM Power Management
     'Get-VMPowerStatus',
     'Set-VMPowerStatus',
+#VM Shared Folders Management
     'Get-VMSharedFolder',
-    'Set-VMSSharedFolders',
     'Update-VMSharedFolder',
     'Add-VMSharedFolder',
-    'Remove-VMSharedFolder'
+    'Remove-VMSharedFolder',
+    'test-Regex'
 )
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
@@ -148,6 +155,5 @@ HelpInfoURI = 'https://github.com/DKreutz0/VMWareWorkstation-API#readme'
 
 # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
 # DefaultCommandPrefix = ''
-
 }
 
