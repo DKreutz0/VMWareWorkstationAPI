@@ -7,157 +7,159 @@
 #
 @{
 
-# Script module or binary module file associated with this manifest.
-RootModule = 'VMWareWorkstation-API.psm1'
+    # Script module or binary module file associated with this manifest.
+    RootModule = 'VMWareWorkstation-API.psm1'
 
-# Version number of this module.
-ModuleVersion = '1.0.2'
+    # Version number of this module.
+    ModuleVersion = '1.0.2'
 
-# Supported PSEditions
-# CompatiblePSEditions = @()
+    # Supported PSEditions
+    # CompatiblePSEditions = @()
 
-# ID used to uniquely identify this module
-GUID = '622b8ab6-d48b-475d-9795-cac38b1500a8'
+    # ID used to uniquely identify this module
+    GUID = '622b8ab6-d48b-475d-9795-cac38b1500a8'
 
-# Author of this module
-Author = 'Dennis Kreutz'
+    # Author of this module
+    Author = 'Dennis Kreutz'
 
-# Copyright statement for this module
-Copyright = '(c) 2023 Dennis Kreutz. All rights reserved.'
+    # Copyright statement for this module
+    Copyright = '(c) 2023 Dennis Kreutz. All rights reserved.'
 
-# Description of the functionality provided by this module
-Description = 'VMWare Workstation REST API'
+    # Description of the functionality provided by this module
+    Description = 'VMWare Workstation REST API'
 
-# Minimum version of the Windows PowerShell engine required by this module
-PowerShellVersion = '7.0.0'
+    # Minimum version of the Windows PowerShell engine required by this module
+    PowerShellVersion = '7.0.0'
 
-# Name of the Windows PowerShell host required by this module
-#PowerShellHostName = 'VMWareWorkstation-API'
+    # Name of the Windows PowerShell host required by this module
+    #PowerShellHostName = 'VMWareWorkstation-API'
 
-# Minimum version of the Windows PowerShell host required by this module
-PowerShellHostVersion = '7.0.0'
+    # Minimum version of the Windows PowerShell host required by this module
+    PowerShellHostVersion = '7.0.0'
 
-# Minimum version of Microsoft .NET Framework required by this module. This prerequisite is valid for the PowerShell Desktop edition only.
-DotNetFrameworkVersion = '4.0.0.0'
+    # Minimum version of Microsoft .NET Framework required by this module. This prerequisite is valid for the PowerShell Desktop edition only.
+    DotNetFrameworkVersion = '4.0.0.0'
 
-# Minimum version of the common language runtime (CLR) required by this module. This prerequisite is valid for the PowerShell Desktop edition only.
-# CLRVersion = ''
+    # Minimum version of the common language runtime (CLR) required by this module. This prerequisite is valid for the PowerShell Desktop edition only.
+    # CLRVersion = ''
 
-# Processor architecture (None, X86, Amd64) required by this module
-# ProcessorArchitecture = ''
+    # Processor architecture (None, X86, Amd64) required by this module
+    # ProcessorArchitecture = ''
 
-# Modules that must be imported into the global environment prior to importing this module
-RequiredModules = @('CredentialManager')
+    # Modules that must be imported into the global environment prior to importing this module
+    RequiredModules = @('CredentialManager')
 
-# Assemblies that must be loaded prior to importing this module
-# RequiredAssemblies = @()
+    # Assemblies that must be loaded prior to importing this module
+    # RequiredAssemblies = @()
 
-# Script files (.ps1) that are run in the caller's environment prior to importing this module.
-#ScriptsToProcess = @()
+    # Script files (.ps1) that are run in the caller's environment prior to importing this module.
+    #ScriptsToProcess = @()
 
-# Type files (.ps1xml) to be loaded when importing this module
-# TypesToProcess = @()
+    # Type files (.ps1xml) to be loaded when importing this module
+    # TypesToProcess = @()
 
-# Format files (.ps1xml) to be loaded when importing this module
-# FormatsToProcess = @()
+    # Format files (.ps1xml) to be loaded when importing this module
+    # FormatsToProcess = @()
 
-# Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
-#NestedModules = @('')
+    # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
+    #NestedModules = @('')
 
-# Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = @(
-    'Get-VMWareWorkstationDocumentation',
-    'Get-VMVirtualNetworkList',
-#Host Networks Management
-    'Get-VMNetMacToIp',
-    'Get-VMVirtualNetworkListPortForwarding',
-    'Set-VMMacToIpBinding',
-    'Set-VMPortForwarding',
-    'New-VMVirtualNetwork',
-    'Remove-VMPortForwarding',
-#VM Management
-    'Get-VMWareWorkstationConfiguration',
-    'Get-VMVirtualMachineList',
-    'Get-VMConfig',
-    'Get-VMConfigParam',
-    'Get-VMRestriction',
-    'Set-VMConfig',
-    'Set-VMConfigParam',
-    'New-VMClonedMachine',
-    'Register-VMClonedMachine',
-    'Remove-VMClonedMachine',
-    'Get-VMTemplateList',
-#VM Network Adapters Management
-    'Get-VMIPAddress',
-    'Get-VMNetworkAdapter',
-    'Get-VMNetAdapterIPStack',
-    'Update-VMNetWorkAdapter',
-    'Add-VMNetAdapter',
-    'Remove-VMNetAdapter',
-#VM Power Management
-    'Get-VMPowerStatus',
-    'Set-VMPowerStatus',
-#VM Shared Folders Management
-    'Get-VMSharedFolder',
-    'Update-VMSharedFolder',
-    'Add-VMSharedFolder',
-    'Remove-VMSharedFolder',
-#VMRUN Section # aliasses
-    'Get-VMSnapshot',
-    'New-VMSnapshot',
-    'Remove-VMSnapshot',
-    'Undo-VMRevertSnapshot'
-)
-
-# Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
-CmdletsToExport = '*'
-
-# Variables to export from this module
-VariablesToExport = '*'
-
-# Aliases to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no aliases to export.
-AliasesToExport = '*'
-
-# DSC resources to export from this module
-# DscResourcesToExport = @()
-
-# List of all modules packaged with this module
-ModuleList = @()
-
-# List of all files packaged with this module
-FileList = @(
-    'VMWareWorkstation-API.psm1',
-    'VMWareWorkstation-API.psd1'
+    # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
+    FunctionsToExport = @(
+        'Get-VMWareWorkstationDocumentation',
+        'Get-VMVirtualNetworkList',
+    #Host Networks Management
+        'Get-VMNetMacToIp',
+        'Get-VMVirtualNetworkListPortForwarding',
+        'Set-VMMacToIpBinding',
+        'Set-VMPortForwarding',
+        'New-VMVirtualNetwork',
+        'Remove-VMPortForwarding',
+    #VM Management
+        'Get-VMWareWorkstationConfiguration',
+        'Get-VMVirtualMachineList',
+        'Get-VMConfig',
+        'Get-VMConfigParam',
+        'Get-VMRestriction',
+        'Set-VMConfig',
+        'Set-VMConfigParam',
+        'New-VMClonedMachine',
+        'Register-VMClonedMachine',
+        'Remove-VMClonedMachine',
+        'Get-VMTemplateList',
+    #VM Network Adapters Management
+        'Get-VMIPAddress',
+        'Get-VMNetworkAdapter',
+        'Get-VMNetAdapterIPStack',
+        'Update-VMNetWorkAdapter',
+        'Add-VMNetAdapter',
+        'Remove-VMNetAdapter',
+    #VM Power Management
+        'Get-VMPowerStatus',
+        'Set-VMPowerStatus',
+    #VM Shared Folders Management
+        'Get-VMSharedFolder',
+        'Update-VMSharedFolder',
+        'Add-VMSharedFolder',
+        'Remove-VMSharedFolder',
+    #VMRUN Section # aliasses
+        'Get-VMSnapshot',
+        'New-VMSnapshot',
+        'Remove-VMSnapshot',
+        'Undo-VMRevertSnapshot',
+        'Set-VMSharedFolderConfig',
+        'Set-VMWareToolParam'
     )
 
-# Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
-PrivateData = @{
-	"PackageManagementProviders" = 'VMWareWorkstation-API.psm1'
-    PSData = @{
+    # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
+    CmdletsToExport = '*'
 
-        # Tags applied to this module. These help with module discovery in online galleries.
-        Tags = @('VMWare','Workstation','REST','API','RESTAPI','VM','VirtualMachine','Clone','Cloning','Automation','template','automation')
+    # Variables to export from this module
+    VariablesToExport = '*'
 
-        # A URL to the license for this module.
-        LicenseUri = 'https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/LICENSE'
+    # Aliases to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no aliases to export.
+    AliasesToExport = '*'
 
-        # A URL to the main website for this project.
-        ProjectUri = 'https://github.com/DKreutz0/VMWareWorkstationAPI.git'
+    # DSC resources to export from this module
+    # DscResourcesToExport = @()
 
-        # A URL to an icon representing this module.
-        IconUri = 'https://github.com/DKreutz0/VMWareWorkstation-API/vmware.ico'
+    # List of all modules packaged with this module
+    ModuleList = @()
 
-        # ReleaseNotes of this module
-        ReleaseNotes = 'https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/README.md'
+    # List of all files packaged with this module
+    FileList = @(
+        'VMWareWorkstation-API.psm1',
+        'VMWareWorkstation-API.psd1'
+        )
 
-    } # End of PSData hashtable
+    # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
+    PrivateData = @{
+        "PackageManagementProviders" = 'VMWareWorkstation-API.psm1'
+        PSData = @{
 
-} # End of PrivateData hashtable
+            # Tags applied to this module. These help with module discovery in online galleries.
+            Tags = @('VMWare','Workstation','REST','API','RESTAPI','VM','VirtualMachine','Clone','Cloning','Automation','template','automation')
 
-# HelpInfo URI of this module
-HelpInfoURI = 'https://github.com/DKreutz0/VMWareWorkstation-API#readme'
+            # A URL to the license for this module.
+            LicenseUri = 'https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/LICENSE'
 
-# Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
-# DefaultCommandPrefix = ''
-}
+            # A URL to the main website for this project.
+            ProjectUri = 'https://github.com/DKreutz0/VMWareWorkstationAPI.git'
+
+            # A URL to an icon representing this module.
+            IconUri = 'https://github.com/DKreutz0/VMWareWorkstation-API/vmware.ico'
+
+            # ReleaseNotes of this module
+            ReleaseNotes = 'https://github.com/DKreutz0/VMWareWorkstationAPI/blob/main/README.md'
+
+        } # End of PSData hashtable
+
+    } # End of PrivateData hashtable
+
+    # HelpInfo URI of this module
+    HelpInfoURI = 'https://github.com/DKreutz0/VMWareWorkstation-API#readme'
+
+    # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
+    # DefaultCommandPrefix = ''
+    }
 
